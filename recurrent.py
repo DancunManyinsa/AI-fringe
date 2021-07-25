@@ -106,7 +106,7 @@ validation_data = (test_x.reshape(-1,seq_length,1), test_y.reshape(-1,output_seq
 #Build model
 model, callbacks = build_model()
 #Accept inputs from command line
-train = sys.argv[0]
+train = sys.argv[1]
 
 if (train == 'train'):
     #Call the input generator to yield a batch of sequences
