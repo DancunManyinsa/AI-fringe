@@ -1,7 +1,6 @@
 #Ensuring compatibility between python 2.7 and 3.x...
 from __future__ import unicode_literals, print_function, division
 
-from datetime import time, tzinfo, timedelta, datetime
 
 #For handling numbers and datasets respectively
 import numpy as np
