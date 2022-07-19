@@ -56,3 +56,6 @@ The graph of the sample test of the autoregressive method is show below:
 
 
 Autoregressive methods on average perform better than neural nets. The extra features offered by AI seem to be useful in tasks such as language processing. Equations are still better at math than neural nets.
+
+License
+This software is released under the MIT license.
