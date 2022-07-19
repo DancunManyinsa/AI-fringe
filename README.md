@@ -1,4 +1,4 @@
-# A comparison of ARIMA v RNN (GRU) on real-valued time series predictions
+## A comparison of ARIMA v RNN (GRU) on real-valued time series predictions
 
 This project compares the accuracy of an Autoregressive Integrated Moving Average model and a Recurrent Neural Network based on Gated Recurrent Units (GRUs) with regards to real-valued time series prediction. The input will be a one week sequence of national hourly electric load demand data for Austria, and the output expected is a prediction of the following week's hourly load demand data. This approximation is solely based on a real-valued time series analysis of historical data.
 
@@ -57,5 +57,5 @@ The graph of the sample test of the autoregressive method is show below:
 
 Autoregressive methods on average perform better than neural nets. The extra features offered by AI seem to be useful in tasks such as language processing. Equations are still better at math than neural nets.
 
-License
+## License
 This software is released under the MIT license.
