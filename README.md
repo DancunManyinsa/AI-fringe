@@ -1,5 +1,5 @@
 ## Author
-Dancun Manyinsa- Fringe project 
+Dancun Manyinsa - Fringe project 
 
 I'm a Python and Rust enthusiast interested in AI and Cybersecurity. You can get in contact with me through my email at dancunmanyinsait@gmail.com
 
