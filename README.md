@@ -1,8 +1,7 @@
 ## Author
 Dancun Manyinsa - Fringe project 
 
-I'm a Python and Rust enthusiast interested in AI and Cybersecurity. You can get in contact with me through my email at dancunmanyinsait@gmail.com
-
+I'm a Python and Rust enthusiast interested in AI and Cybersecurity. 
 
 ## Fringe project 
 Fringe effect is a result of boundary conditions not being completely ideal.
