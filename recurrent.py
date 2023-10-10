@@ -6,6 +6,8 @@ import time
 from time import time as time_
 
 import tensorflow as tf
+#from tensorflow.keras.layers import Bidirectional,LSTM,Dense
+
 
 #For handling numbers
 import numpy as np
@@ -14,7 +16,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 #For graphical plot display
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 from matplotlib import style
 
 import data_handler
@@ -84,13 +86,14 @@ def build_model():
     #List of functions called at end of each training epoch
     callbacks=[checkpoints,logs,reduce_lr,early_stopping]
 
-    return model, callbacks
+    return model, callbacks,
 
 #A function to predict data
 def predict(model, data, label_scaler):
     data_x = data[:seq_length]
     data_x = np.expand_dims(data_x, axis=0)
     pred_y = model.predict(data_x)
+    #pred_y = label_scaler.inverse_transform(pred_y.reshape(output_seq_length,1))
     pred_y = label_scaler.inverse_transform(pred_y)
 
     return pred_y.reshape(output_seq_length,1)
@@ -98,6 +101,7 @@ def predict(model, data, label_scaler):
 raw_x, raw_y = data_handler.fetch_data()
 #Standardizing data to force it to lie on the same range
 scaler_x, x, scaler_y, y = data_handler.standardize_data(raw_x, raw_y)
+
 #Splitting data into training and testing sets
 train_x, test_x = data_handler.split_data(x)
 train_y, test_y = data_handler.split_data(y)
@@ -114,7 +118,7 @@ if (train == 'train'):
     #Train the model
     model.fit_generator(generator=input_gen,
                         epochs=epochs,
-                        steps_per_epoch=steps_per_epoch, 
+                        steps_per_epoch=steps_per_epoch,
                         callbacks=callbacks,
                         validation_data=validation_data)
 elif(train == 'test'):
@@ -125,7 +129,7 @@ elif(train == 'test'):
     #Can be, for example, a random integer that is a multiple of 168 but within the range of test data
     #Can also be a function of your choice
     spot = 0
-    _ , raw_test_y = data_handler.split_data(raw_y)
+    _ ,raw_test_y = data_handler.split_data(raw_y)
     raw_test_y_ = raw_test_y[spot:]
     pred = predict(model, test_x[spot:], scaler_y)
     #Compare actual and predicted values
