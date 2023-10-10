@@ -126,7 +126,7 @@ elif(train == 'test'):
     #Can also be a function of your choice
     spot = 0
     _ , raw_test_y = data_handler.split_data(raw_y)
-    raw_test_y = raw_test_y[spot:]
+    raw_test_y_ = raw_test_y[spot:]
     pred = predict(model, test_x[spot:], scaler_y)
     #Compare actual and predicted values
     data_handler.plot_comparison(true=raw_test_y[:output_seq_length],
