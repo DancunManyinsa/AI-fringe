@@ -94,7 +94,7 @@ def predict(model, data, label_scaler):
     data_x = np.expand_dims(data_x, axis=0)
     pred_y = model.predict(data_x)
     pred_y_ = label_scaler.inverse_transform(pred_y.reshape(output_seq_length,1))
-    #(Originl) pred_y = label_scaler.inverse_transform(pred_y)
+    #(Original) pred_y = label_scaler.inverse_transform(pred_y)
 
     return pred_y_.reshape(output_seq_length,1)
     #(Original) return pred_y.reshape(output_seq_length,1)
