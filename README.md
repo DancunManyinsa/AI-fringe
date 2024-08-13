@@ -1,7 +1,6 @@
 ## Author
 Dancun Manyinsa - Fringe project 
 
-
 ## Fringe project 
 Fringe effect is a result of boundary conditions not being completely ideal.
 
