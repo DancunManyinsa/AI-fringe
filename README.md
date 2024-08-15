@@ -1,7 +1,9 @@
 ## Author
-Dancun Manyinsa - Fringe project 
+
+> Dancun Manyinsa - Fringe project 
 
 ## Fringe project 
+
 Fringe effect is a result of boundary conditions not being completely ideal.
 
 According to Maxwells Equations we know ∇.D = ρ. This implies n.(D2 - D1) = ρs where n is a normal vector to the surface of the capacitor and ρs is a surface charge density. Assuming all surface charge is on the plane closest to the other plate and a conducting material, D field on the smaller sides of the plate would equally be zero. Slight imperfections in the material (like thickness and some surface charge in the wrong places), we will experience some fringing - which comes directly from Maxwells Equations.
